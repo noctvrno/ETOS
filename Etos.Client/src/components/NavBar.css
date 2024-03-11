@@ -2,6 +2,5 @@
     background-color: mediumpurple;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    height: 100vh;
+    height: 100dvh;
 }
