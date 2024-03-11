@@ -1,0 +1,6 @@
+.nav-bar {
+    background-color: mediumpurple;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
