@@ -1,29 +1,12 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
+import ActivityFeedGroup from "./ActivityFeedGroup";
 
 export default function ActivityFeed() {
     return (
         <Stack>
-            <Button
-                color="secondary"
-                variant="outlined"
-                style={{
-                    fontSize: 30,
-                    justifyContent: "flex-start",
-                    color: "white",
-                    margin: 20,
-                    borderRadius: 50
-                }}>
-                Test
-            </Button>
-            <Typography variant="h3">
-                Training
-            </Typography>
-            <Typography variant="h3">
-                Orientation
-            </Typography>
-            <Typography variant="h3">
-                Feedback
-            </Typography>
+            <ActivityFeedGroup groupName="Training" />
+            <ActivityFeedGroup groupName="Orientation" />
+            <ActivityFeedGroup groupName="Feedback" />
         </Stack>
     );
 }

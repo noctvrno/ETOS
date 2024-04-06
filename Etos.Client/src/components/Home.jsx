@@ -8,7 +8,7 @@ export default function Home() {
             <Box>
                 <NavBar />
             </Box>
-            <Box flex={{ xs: 12 }} textAlign="center">
+            <Box flex={{ xs: 12 }}>
                 <ActivityFeed />
             </Box>
         </Box>
