@@ -6,7 +6,12 @@ const items = ["Test1", "Test2"];
 export default function ActivityFeedGroup(props) {
     return (
         <>
-            <Typography variant="h4">
+            <Typography
+                variant="h4"
+                sx={{
+                    marginTop: "2rem",
+                    marginLeft: "1rem"
+                }}>
                 {props.groupName}
             </Typography>
             {items.map(itemName => {
@@ -18,7 +23,8 @@ export default function ActivityFeedGroup(props) {
                         style={{
                             justifyContent: "flex-start",
                             color: "white",
-                            margin: "2rem 2rem 0",
+                            marginTop: "1rem",
+                            marginLeft: "2rem",
                             borderRadius: "50px",
                             textTransform: "none",
                             whiteSpace: 'normal'
