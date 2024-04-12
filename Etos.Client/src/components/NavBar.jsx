@@ -1,30 +1,34 @@
 import './NavBar.css';
 import NavBarItem from './NavBarItem'
-import List from '@mui/material/List';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import { HomeOutlined, SchoolOutlined, CheckBoxOutlined, VisibilityOutlined } from '@mui/icons-material'
+import { Avatar, Divider, List, Typography } from '@mui/material';
 
 export default function NavBar() {
     return (
-        <List className='nav-bar'>
+        <List className="nav-bar">
+            <Avatar
+                alt="Temp User"
+                sx={{
+                    width: "256px",
+                    height: "256px",
+                    margin: "1rem"
+                }} />
+            <Typography variant="h6" padding={1}>
+                .NET Developer
+            </Typography>
+            <Divider sx={{ width: "100%" }} />
             <NavBarItem
                 name={"Home"}
-                icon={<HomeOutlinedIcon />}
-            />
+                icon={<HomeOutlined />} />
             <NavBarItem
                 name={"Training"}
-                icon={<SchoolOutlinedIcon />}
-            />
+                icon={<SchoolOutlined />} />
             <NavBarItem
                 name={"Orientation"}
-                icon={<VisibilityOutlinedIcon />}
-            />
+                icon={<VisibilityOutlined />} />
             <NavBarItem
                 name={"Feedback"}
-                icon={<CheckBoxOutlinedIcon />}
-            />
+                icon={<CheckBoxOutlined />} />
         </List>
     );
 }

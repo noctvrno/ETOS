@@ -4,11 +4,11 @@ import ActivityFeed from "./ActivityFeed";
 
 export default function Home() {
     return (
-        <Box display="flex" height="100vh" width="100vw">
-            <Box>
+        <Box display="flex" height="100dvh" width="100dvw">
+            <Box flex={{ xs: 3 }}>
                 <NavBar />
             </Box>
-            <Box flex={{ xs: 12 }}>
+            <Box flex={{ xs: 10 }}>
                 <ActivityFeed />
             </Box>
         </Box>
