@@ -24,10 +24,12 @@ export default function ActivityFeedGroup(props) {
                             style={{
                                 justifyContent: "flex-start",
                                 color: "white",
+                                padding: "1rem",
                                 marginLeft: "2rem",
+                                marginRight: "2rem",
                                 borderRadius: "50px",
                                 textTransform: "none",
-                                whiteSpace: 'normal'
+                                whiteSpace: "normal"
                             }}>
                             <Typography variant='h5'>{itemName}</Typography>
                         </Button>

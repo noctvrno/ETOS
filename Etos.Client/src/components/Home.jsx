@@ -5,7 +5,7 @@ import ActivityFeed from "./ActivityFeed";
 export default function Home() {
     return (
         <Box display="flex" height="100dvh" width="100dvw">
-            <Box flex={{ xs: 3 }}>
+            <Box flex={{ xs: 2 }}>
                 <NavBar />
             </Box>
             <Box flex={{ xs: 10 }}>
