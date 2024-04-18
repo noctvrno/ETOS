@@ -1,10 +1,11 @@
 import './App.css';
-import Home from './components/Home';
+import NavBarPage from './components/nav-bar/NavBarPage';
+import ActivityFeed from './components/ActivityFeed';
 
 export default function App() {
     return (
         <>
-            <Home />
+            <NavBarPage content={<ActivityFeed />} />
         </>
     );
 }
