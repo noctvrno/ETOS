@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import ActivityFeedGroup from "./ActivityFeedGroup";
+import ActivityFeedGroup from "./activity-feed-group";
 
 export default function ActivityFeed() {
     return (

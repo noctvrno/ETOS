@@ -1,5 +1,5 @@
 import './NavBar.css';
-import NavBarItem from './NavBarItem'
+import NavBarItem from './nav-bar-item'
 import { HomeOutlined, SchoolOutlined, CheckBoxOutlined, VisibilityOutlined } from '@mui/icons-material'
 import { Avatar, Divider, List, Typography } from '@mui/material';
 
