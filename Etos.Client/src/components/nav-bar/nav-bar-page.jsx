@@ -9,7 +9,7 @@ export default function NavBarPage(props) {
                 <NavBar />
             </Box>
             <Box flex={{ xs: 10 }}>
-                {props.content}
+                {props.content} // TODO: Use ReactRouter.Outlet instead.
             </Box>
         </Box>
     )

@@ -1,12 +1,19 @@
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import {
+    ListItem,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText
+} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-export default function NavBar({icon, name}) {
+export default function NavBarItem({ icon, name, navigationRoute }) {
+    const navigate = useNavigate();
+
     return (
         <ListItem>
-            <ListItemButton>
+            <ListItemButton onClick={() => {
+                navigate(navigationRoute);
+            }}>
                 <ListItemIcon>
                     {icon}
                 </ListItemIcon>
