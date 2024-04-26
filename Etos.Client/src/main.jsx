@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
 import './index.css';
 import {
     RouterProvider,
@@ -11,20 +10,25 @@ import ActivityFeed from './components/activity/activity-feed.jsx';
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <NavBarPage content={<ActivityFeed />} />,
-    },
-    {
-        path: "/training",
-        element: <NavBarPage content={<ActivityFeed />} />,
-    },
-    {
-        path: "/orientation",
-        element: <NavBarPage content={<ActivityFeed />} />,
-    },
-    {
-        path: "/feedback",
-        element: <NavBarPage content={<ActivityFeed />} />,
+        element: <NavBarPage />,
+        children: [
+            {
+                path: "/",
+                element: <ActivityFeed />
+            },
+            {
+                path: "training",
+                element: <ActivityFeed />
+            },
+            {
+                path: "orientation",
+                element: <ActivityFeed />
+            },
+            {
+                path: "feedback",
+                element: <ActivityFeed />
+            },
+        ]
     },
 ]);
 
