@@ -1,5 +1,5 @@
-import './NavBar.css';
-import NavBarItem from './NavBarItem'
+import './nav-bar.css';
+import NavBarItem from './nav-bar-item'
 import { HomeOutlined, SchoolOutlined, CheckBoxOutlined, VisibilityOutlined } from '@mui/icons-material'
 import { Avatar, Divider, List, Typography } from '@mui/material';
 
@@ -18,17 +18,21 @@ export default function NavBar() {
             </Typography>
             <Divider sx={{ width: "100%" }} />
             <NavBarItem
-                name={"Home"}
-                icon={<HomeOutlined />} />
+                name="Home"
+                icon={<HomeOutlined />}
+                navigationRoute="/" />
             <NavBarItem
                 name={"Training"}
-                icon={<SchoolOutlined />} />
+                icon={<SchoolOutlined />}
+                navigationRoute="/training" />
             <NavBarItem
                 name={"Orientation"}
-                icon={<VisibilityOutlined />} />
+                icon={<VisibilityOutlined />}
+                navigationRoute="/orientation" />
             <NavBarItem
                 name={"Feedback"}
-                icon={<CheckBoxOutlined />} />
+                icon={<CheckBoxOutlined />}
+                navigationRoute="/feedback" />
         </List>
     );
 }
