@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import NavBarPage from './components/nav-bar/nav-bar-page.jsx';
 import ActivityFeed from './components/activity/activity-feed.jsx';
+import Training from './components/activity/training/training.jsx';
 
 const router = createBrowserRouter([
     {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "training",
-                element: <ActivityFeed />
+                element: <Training />
             },
             {
                 path: "orientation",
