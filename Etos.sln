@@ -7,7 +7,13 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Etos.Client", "Presentation
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{4E1CCC6C-863D-4398-AFE0-370F80AFEBDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.WebApi", "Presentation\Etos.WebApi\Etos.WebApi.csproj", "{8894C7C5-415C-42E5-AC6D-0DFC00C1D485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etos.WebApi", "Presentation\Etos.WebApi\Etos.WebApi.csproj", "{8894C7C5-415C-42E5-AC6D-0DFC00C1D485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.Domain", "Etos.Domain\Etos.Domain.csproj", "{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.Application", "Etos.Application\Etos.Application.csproj", "{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.Infrastructure", "Etos.Infrastructure\Etos.Infrastructure.csproj", "{6F1D1167-475D-4646-B07F-EBBDA30A854A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,18 @@ Global
 		{8894C7C5-415C-42E5-AC6D-0DFC00C1D485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8894C7C5-415C-42E5-AC6D-0DFC00C1D485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8894C7C5-415C-42E5-AC6D-0DFC00C1D485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1D1167-475D-4646-B07F-EBBDA30A854A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1D1167-475D-4646-B07F-EBBDA30A854A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1D1167-475D-4646-B07F-EBBDA30A854A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1D1167-475D-4646-B07F-EBBDA30A854A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,4 +12,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Etos.Application\Etos.Application.csproj" />
+    <ProjectReference Include="..\..\Etos.Infrastructure\Etos.Infrastructure.csproj" />
+    <ProjectReference Include="..\Etos.Client\Etos.Client.esproj" />
+  </ItemGroup>
+
 </Project>
