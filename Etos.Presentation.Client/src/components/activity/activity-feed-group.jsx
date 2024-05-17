@@ -1,9 +1,7 @@
 import React from 'react'
 import { Button, Stack, Typography } from "@mui/material";
 
-const items = ["Test1", "Test2"];
-
-export default function ActivityFeedGroup(props) {
+export default function ActivityFeedGroup({groupName, activities = []}) {
     return (
         <>
             <Typography
@@ -12,13 +10,13 @@ export default function ActivityFeedGroup(props) {
                     margin: "2rem",
                     marginLeft: "1rem"
                 }}>
-                {props.groupName}
+                {groupName}
             </Typography>
             <Stack spacing={2.5}>
-                {items.map(itemName => {
+                {activities.map(activity => {
                     return (
                         <Button
-                            key={itemName}
+                            key={activity.id.value}
                             color="secondary"
                             variant="outlined"
                             style={{
@@ -31,7 +29,7 @@ export default function ActivityFeedGroup(props) {
                                 textTransform: "none",
                                 whiteSpace: "normal"
                             }}>
-                            <Typography variant='h5'>{itemName}</Typography>
+                            <Typography variant='h5'>{activity.title}</Typography>
                         </Button>
                     )
                 })}
