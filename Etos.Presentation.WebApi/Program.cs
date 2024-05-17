@@ -1,13 +1,19 @@
 using Etos.Application;
+using Etos.Presentation.WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
 
-var app = builder.Build();
+builder.Services.AddRepositories();
+
+WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
@@ -16,4 +22,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
+
 app.Run();
