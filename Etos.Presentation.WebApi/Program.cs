@@ -1,7 +1,7 @@
 using Etos.Application;
 using Etos.Presentation.WebApi;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
@@ -25,4 +25,4 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
