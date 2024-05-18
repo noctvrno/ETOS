@@ -7,11 +7,16 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Etos.Presentation.Client", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etos.Presentation.WebApi", "Etos.Presentation.WebApi\Etos.Presentation.WebApi.csproj", "{8894C7C5-415C-42E5-AC6D-0DFC00C1D485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.Domain", "Etos.Domain\Etos.Domain.csproj", "{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etos.Domain", "Etos.Domain\Etos.Domain.csproj", "{7A20D652-A79D-412C-ADA4-A63FBE46AEB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.Application", "Etos.Application\Etos.Application.csproj", "{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etos.Application", "Etos.Application\Etos.Application.csproj", "{4BEDE350-0A08-4E2A-AECD-E29F99BCDA14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etos.Infrastructure", "Etos.Infrastructure\Etos.Infrastructure.csproj", "{6F1D1167-475D-4646-B07F-EBBDA30A854A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etos.Infrastructure", "Etos.Infrastructure\Etos.Infrastructure.csproj", "{6F1D1167-475D-4646-B07F-EBBDA30A854A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9FEA116B-030F-43BA-A1F5-DA1193852AC2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
