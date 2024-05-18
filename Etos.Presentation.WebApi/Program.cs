@@ -1,5 +1,6 @@
 using Etos.Application;
 using Etos.Presentation.WebApi;
+using Serilog;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 
 builder.Services.AddRepositories();
+
+builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
 
 WebApplication app = builder.Build();
 
