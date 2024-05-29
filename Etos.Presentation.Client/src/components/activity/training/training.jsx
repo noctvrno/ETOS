@@ -6,7 +6,7 @@ export default function Training() {
     useEffect(() => {
         fetch("/api/training")
             .then(response => response.json())
-            .then(data =>setActivities(data.activities));
+            .then(data => setActivities(data.activities));
     }, []);
 
     return (
