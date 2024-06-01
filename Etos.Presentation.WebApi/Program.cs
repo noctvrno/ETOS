@@ -1,5 +1,7 @@
 using Etos.Application;
+using Etos.Domain.Repositories;
 using Etos.Infrastructure;
+using Etos.Infrastructure.Repositories;
 using Etos.Presentation.WebApi;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -16,6 +18,8 @@ builder.Services.AddApplication();
 builder.Services.AddRepositories();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
 
