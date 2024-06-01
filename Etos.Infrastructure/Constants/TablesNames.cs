@@ -3,4 +3,5 @@
 internal static class TablesNames
 {
     internal const string TRAININGS = "Trainings";
+    internal const string USERS = "Users";
 }
