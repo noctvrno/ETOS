@@ -2,9 +2,14 @@
 
 namespace Etos.Infrastructure.Repositories;
 
-public class UnitOfWork(ApplicationDbContext dbContext) : IUnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
-    private readonly ApplicationDbContext _dbContext = dbContext;
+    private readonly ApplicationDbContext _dbContext;
+
+    public UnitOfWork(ApplicationDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
 
     public Task SaveChangesAsync(CancellationToken cancellationToken)
     {
