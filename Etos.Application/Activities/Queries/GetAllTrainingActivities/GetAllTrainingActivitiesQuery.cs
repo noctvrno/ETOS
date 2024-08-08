@@ -2,4 +2,4 @@
 
 namespace Etos.Application.Activities.Queries.GetAllTrainingActivities;
 
-public sealed record GetAllTrainingActivitiesQuery() : IQuery<ActivitiesResponse> { }
+public sealed record GetAllTrainingActivitiesQuery : IQuery<ActivitiesResponse> { }

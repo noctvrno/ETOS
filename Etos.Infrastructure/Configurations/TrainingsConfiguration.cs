@@ -18,6 +18,11 @@ internal sealed class TrainingsConfiguration : IEntityTypeConfiguration<Training
             .Property(t => t.Id)
             .HasConversion(id => id.Value, dbId => new ActivityId(dbId));
 
+        builder
+            .HasOne<User>()
+            .WithMany()
+            .HasForeignKey("UserId");
+
         builder.Property(t => t.Title);
     }
 }

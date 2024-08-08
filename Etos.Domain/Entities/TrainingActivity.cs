@@ -2,8 +2,23 @@
 
 namespace Etos.Domain.Entities;
 
-public class TrainingActivity(ActivityId id, string title) : IActivity
+public class TrainingActivity : IActivity
 {
-    public ActivityId Id { get; } = id;
-    public string Title { get; } = title;
+    public ActivityId Id { get; }
+    public string Title { get; }
+    public User Assignee { get; }
+
+    private TrainingActivity(ActivityId id, string title, User assignee)
+    {
+        Id = id;
+        Title = title;
+        Assignee = assignee;
+    }
+
+    public TrainingActivity() { }
+
+    public static TrainingActivity Create(string title, User assignee)
+    {
+        return new TrainingActivity(new ActivityId(Guid.NewGuid()), title, assignee);
+    }
 }

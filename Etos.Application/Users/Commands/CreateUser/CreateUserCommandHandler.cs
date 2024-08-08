@@ -4,12 +4,16 @@ using Etos.Domain.Repositories;
 
 namespace Etos.Application.Users.Commands.CreateUser;
 
-public sealed class CreateUserCommandHandler(
-        IUserRepository userRepository,
-        IUnitOfWork unitOfWork) : ICommandHandler<CreateUserCommand, UserId>
+public sealed class CreateUserCommandHandler : ICommandHandler<CreateUserCommand, UserId>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+    private readonly IUserRepository _userRepository;
+    private readonly IUnitOfWork _unitOfWork;
+
+    public CreateUserCommandHandler(IUserRepository userRepository, IUnitOfWork unitOfWork)
+    {
+        _userRepository = userRepository;
+        _unitOfWork = unitOfWork;
+    }
 
     public Task<UserId> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
