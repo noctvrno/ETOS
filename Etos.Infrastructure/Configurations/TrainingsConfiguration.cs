@@ -19,8 +19,8 @@ internal sealed class TrainingsConfiguration : IEntityTypeConfiguration<Training
             .HasConversion(id => id.Value, dbId => new ActivityId(dbId));
 
         builder
-            .HasOne<User>()
-            .WithMany()
+            .HasOne(t => t.Assignee)
+            .WithMany(u => u.Trainings)
             .HasForeignKey("UserId");
 
         builder.Property(t => t.Title);

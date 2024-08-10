@@ -15,7 +15,8 @@ namespace Etos.Infrastructure.Migrations
                 name: "UserId",
                 table: "Trainings",
                 type: "uuid",
-                nullable: true);
+                nullable: false,
+                defaultValue: new Guid("00000000-0000-0000-0000-000000000000"));
 
             migrationBuilder.CreateIndex(
                 name: "IX_Trainings_UserId",
@@ -27,7 +28,8 @@ namespace Etos.Infrastructure.Migrations
                 table: "Trainings",
                 column: "UserId",
                 principalTable: "Users",
-                principalColumn: "Id");
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
