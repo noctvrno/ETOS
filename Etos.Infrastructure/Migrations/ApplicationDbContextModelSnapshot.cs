@@ -31,7 +31,7 @@ namespace Etos.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("UserId")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -65,9 +65,18 @@ namespace Etos.Infrastructure.Migrations
 
             modelBuilder.Entity("Etos.Domain.Entities.TrainingActivity", b =>
                 {
-                    b.HasOne("Etos.Domain.Entities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId");
+                    b.HasOne("Etos.Domain.Entities.User", "Assignee")
+                        .WithMany("Trainings")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Assignee");
+                });
+
+            modelBuilder.Entity("Etos.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Trainings");
                 });
 #pragma warning restore 612, 618
         }

@@ -22,7 +22,7 @@ internal sealed class CreateTrainingCommandHandler : ICommandHandler<CreateTrain
     public Task Handle(CreateTrainingCommand request, CancellationToken cancellationToken)
     {
         User user = _userRepository.GetById(request.AssigneeId);
-        var trainingActivity = TrainingActivity.Create(request.Title, user);
+        var trainingActivity = TrainingActivity.Create(request.Title, user); // TODO: Consider having multiple users which can be assigned after creation.
 
         _trainingRepository.Add(trainingActivity);
 
