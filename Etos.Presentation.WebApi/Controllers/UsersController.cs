@@ -1,4 +1,4 @@
-﻿using Etos.Application.Users.Commands.CreateUser;
+﻿using Etos.Application.Users.Commands;
 using Etos.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -11,17 +11,17 @@ public class UsersController : ControllerBase
 {
     private readonly ISender _sender;
 
-    public UsersController(ISender Sender)
+    public UsersController(ISender sender)
     {
-        _sender = Sender;
+        _sender = sender;
     }
 
     [HttpPost]
     public async Task<IActionResult> Create(
-        [FromBody] CreateUserCommand command,
+        [FromBody] CreateUser.Request request,
         CancellationToken cancellationToken)
     {
-        UserId userId = await _sender.Send(command, cancellationToken);
+        UserId userId = await _sender.Send(request, cancellationToken);
         return Ok(userId);
     }
 }
