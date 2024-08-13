@@ -1,5 +1,5 @@
-﻿using Etos.Application.Activities.Queries.GetAllTrainingActivities;
-using Etos.Application.Users.Commands.CreateTraining;
+﻿using Etos.Application.Activities.Queries;
+using Etos.Application.Users.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,23 +11,23 @@ public class TrainingController : ControllerBase
 {
     private readonly ISender _sender;
 
-    public TrainingController(ISender Sender)
+    public TrainingController(ISender sender)
     {
-        _sender = Sender;
+        _sender = sender;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllTrainings(CancellationToken cancellationToken)
     {
-        GetAllTrainingActivitiesQuery query = new();
-        ActivitiesResponse response = await _sender.Send(query, cancellationToken);
+        GetTrainings.Request request = new();
+        GetTrainings.Response response = await _sender.Send(request, cancellationToken);
 
         return Ok(response);
     }
 
     [HttpPost]
     public async Task<IActionResult> Create(
-        [FromBody] CreateTrainingCommand command,
+        [FromBody] CreateTraining.Request command,
         CancellationToken cancellationToken
     )
     {
