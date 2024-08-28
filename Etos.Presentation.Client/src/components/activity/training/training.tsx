@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react'
 import ActivityFeedGroup from '../ActivityFeedGroup'
 
@@ -11,5 +12,6 @@ export default function Training() {
 
     return (
         <ActivityFeedGroup Name="Training" Activities={activities} />
+        <CreateTrainingForm /> {/* TODO: This will need to be embedded into ActivityFeedGroup */}
     )
 }
