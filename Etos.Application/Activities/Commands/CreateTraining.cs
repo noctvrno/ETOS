@@ -2,7 +2,7 @@
 using Etos.Domain.Entities;
 using Etos.Domain.Repositories;
 
-namespace Etos.Application.Users.Commands;
+namespace Etos.Application.Activities.Commands;
 
 public static class CreateTraining
 {

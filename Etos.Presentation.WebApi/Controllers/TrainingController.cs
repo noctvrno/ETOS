@@ -1,5 +1,5 @@
-﻿using Etos.Application.Activities.Queries;
-using Etos.Application.Users.Commands;
+﻿using Etos.Application.Activities.Commands;
+using Etos.Application.Activities.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
