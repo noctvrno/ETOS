@@ -1,3 +1,4 @@
+import React from 'react';
 import './nav-bar.css';
 import NavBarItem from './nav-bar-item'
 import { HomeOutlined, SchoolOutlined, CheckBoxOutlined, VisibilityOutlined } from '@mui/icons-material'
@@ -9,9 +10,9 @@ export default function NavBar() {
             <Avatar
                 alt="Temp User"
                 sx={{
-                    width: "256px",
-                    height: "256px",
-                    margin: "1rem"
+                    width: 256,
+                    height: 256,
+                    margin: 2
                 }} />
             <Typography variant="h6" padding={1}>
                 .NET Developer

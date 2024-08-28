@@ -7,8 +7,8 @@ export default function ActivityFeedGroup({groupName, activities = []}) {
             <Typography
                 variant="h4"
                 sx={{
-                    margin: "2rem",
-                    marginLeft: "1rem"
+                    margin: 4,
+                    marginLeft: 2
                 }}>
                 {groupName}
             </Typography>
@@ -22,9 +22,9 @@ export default function ActivityFeedGroup({groupName, activities = []}) {
                             style={{
                                 justifyContent: "flex-start",
                                 color: "white",
-                                padding: "1rem",
-                                marginLeft: "2rem",
-                                marginRight: "2rem",
+                                padding: 2,
+                                marginLeft: 4,
+                                marginRight: 4,
                                 borderRadius: "50px",
                                 textTransform: "none",
                                 whiteSpace: "normal"
