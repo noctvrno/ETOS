@@ -5,9 +5,9 @@ import {
     RouterProvider,
     createBrowserRouter
 } from 'react-router-dom';
-import NavBarPage from './components/nav-bar/nav-bar-page.jsx';
-import ActivityFeed from './components/activity/activity-feed.jsx';
-import Training from './components/activity/training/training.jsx';
+import NavBarPage from './components/nav-bar/nav-bar-page';
+import ActivityFeed from './components/activity/activity-feed';
+import Training from './components/activity/training/training';
 
 const router = createBrowserRouter([
     {

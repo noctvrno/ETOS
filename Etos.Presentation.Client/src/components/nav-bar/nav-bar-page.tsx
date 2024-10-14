@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box } from '@mui/material'
 import NavBar from './nav-bar'
 import { Outlet } from 'react-router-dom'

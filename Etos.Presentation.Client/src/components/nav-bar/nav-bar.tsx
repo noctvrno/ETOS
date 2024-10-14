@@ -9,9 +9,9 @@ export default function NavBar() {
             <Avatar
                 alt="Temp User"
                 sx={{
-                    width: "256px",
-                    height: "256px",
-                    margin: "1rem"
+                    width: 256,
+                    height: 256,
+                    margin: 2
                 }} />
             <Typography variant="h6" padding={1}>
                 .NET Developer
