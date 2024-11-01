@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import NavBar from './nav-bar'
+import NavBar from './NavBar'
 import { Outlet } from 'react-router-dom'
 
 export default function NavBarPage() {
