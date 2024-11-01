@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './Index.css';
 import {
     RouterProvider,
     createBrowserRouter
 } from 'react-router-dom';
-import NavBarPage from './components/nav-bar/nav-bar-page';
-import ActivityFeed from './components/activity/activity-feed';
+import NavBarPage from './components/nav-bar/NavBarPage';
+import ActivityFeed from './components/activity/ActivityFeed';
 import Training from './components/activity/training/training';
 
 const router = createBrowserRouter([

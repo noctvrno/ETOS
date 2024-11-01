@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import ActivityFeedGroup from '../activity-feed-group'
+import ActivityFeedGroup from '../ActivityFeedGroup'
 
 export default function Training() {
     const [activities, setActivities] = useState([]);
