@@ -1,6 +1,11 @@
 import { Button, Stack, Typography } from "@mui/material";
 
-export default function ActivityFeedGroup({groupName, activities = []}) {
+interface IActivityFeedGroup {
+    Name: string;
+    Activities: IActivity[];
+}
+
+export default function ActivityFeedGroup(group: IActivityFeedGroup) {
     return (
         <>
             <Typography
@@ -9,13 +14,13 @@ export default function ActivityFeedGroup({groupName, activities = []}) {
                     margin: 4,
                     marginLeft: 2
                 }}>
-                {groupName}
+                {group.Name}
             </Typography>
             <Stack spacing={2.5}>
-                {activities.map(activity => {
+                {group.Activities.map(activity => {
                     return (
                         <Button
-                            key={activity.id.value}
+                            key={activity.Id}
                             color="secondary"
                             variant="outlined"
                             style={{
@@ -28,7 +33,7 @@ export default function ActivityFeedGroup({groupName, activities = []}) {
                                 textTransform: "none",
                                 whiteSpace: "normal"
                             }}>
-                            <Typography variant='h5'>{activity.title}</Typography>
+                            <Typography variant='h5'>{activity.Title}</Typography>
                         </Button>
                     )
                 })}

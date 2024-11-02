@@ -18,21 +18,21 @@ export default function NavBar() {
             </Typography>
             <Divider sx={{ width: "100%" }} />
             <NavBarItem
-                name="Home"
-                icon={<HomeOutlined />}
-                navigationRoute="/" />
+                Name="Home"
+                Icon={<HomeOutlined />}
+                Route="/" />
             <NavBarItem
-                name={"Training"}
-                icon={<SchoolOutlined />}
-                navigationRoute="/training" />
+                Name={"Training"}
+                Icon={<SchoolOutlined />}
+                Route="/training" />
             <NavBarItem
-                name={"Orientation"}
-                icon={<VisibilityOutlined />}
-                navigationRoute="/orientation" />
+                Name={"Orientation"}
+                Icon={<VisibilityOutlined />}
+                Route="/orientation" />
             <NavBarItem
-                name={"Feedback"}
-                icon={<CheckBoxOutlined />}
-                navigationRoute="/feedback" />
+                Name={"Feedback"}
+                Icon={<CheckBoxOutlined />}
+                Route="/feedback" />
         </List>
     );
 }

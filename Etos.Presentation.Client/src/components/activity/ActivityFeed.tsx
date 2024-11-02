@@ -4,9 +4,9 @@ import ActivityFeedGroup from "./ActivityFeedGroup";
 export default function ActivityFeed() {
     return (
         <Stack>
-            <ActivityFeedGroup groupName="Training" />
-            <ActivityFeedGroup groupName="Orientation" />
-            <ActivityFeedGroup groupName="Feedback" />
+            <ActivityFeedGroup Name="Training" Activities={[]} />
+            <ActivityFeedGroup Name="Orientation" Activities={[]} />
+            <ActivityFeedGroup Name="Feedback" Activities={[]} />
         </Stack>
     );
 }

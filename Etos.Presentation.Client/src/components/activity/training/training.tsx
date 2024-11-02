@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import ActivityFeedGroup from '../ActivityFeedGroup'
 
 export default function Training() {
-    const [activities, setActivities] = useState([]);
+    const [activities, setActivities] = useState<IActivity[]>([]);
     useEffect(() => {
         fetch("/api/training")
             .then(response => response.json())
@@ -10,6 +10,6 @@ export default function Training() {
     }, []);
 
     return (
-        <ActivityFeedGroup groupName="Training" activities={activities} />
+        <ActivityFeedGroup Name="Training" Activities={activities} />
     )
 }
