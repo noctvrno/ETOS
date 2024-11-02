@@ -6,18 +6,24 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-export default function NavBarItem({ icon, name, navigationRoute }) {
+interface INavBarItem {
+    Name: string;
+    Icon: JSX.Element;
+    Route: string;
+}
+
+export default function NavBarItem(navBarItem: INavBarItem) {
     const navigate = useNavigate();
 
     return (
         <ListItem>
             <ListItemButton onClick={() => {
-                navigate(navigationRoute);
+                navigate(navBarItem.Route);
             }}>
                 <ListItemIcon>
-                    {icon}
+                    {navBarItem.Icon}
                 </ListItemIcon>
-                <ListItemText primary={name} />
+                <ListItemText primary={navBarItem.Name} />
             </ListItemButton>
         </ListItem>
     );

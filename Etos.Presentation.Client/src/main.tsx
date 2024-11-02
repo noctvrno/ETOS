@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Index.css';
+import './index.css';
 import {
     RouterProvider,
     createBrowserRouter
 } from 'react-router-dom';
 import NavBarPage from './components/nav-bar/NavBarPage';
 import ActivityFeed from './components/activity/ActivityFeed';
-import Training from './components/activity/training/training';
+import Training from './components/activity/training/Training';
+
+const rootElement: HTMLElement | null = document.getElementById("root");
+if (rootElement == null)
+    throw new Error("Could not find root element.");
 
 const router = createBrowserRouter([
     {
@@ -33,7 +37,7 @@ const router = createBrowserRouter([
     },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
         <RouterProvider router={router} />
     </React.StrictMode>,
