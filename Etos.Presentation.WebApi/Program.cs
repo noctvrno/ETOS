@@ -3,6 +3,7 @@ using Etos.Domain.Repositories;
 using Etos.Infrastructure;
 using Etos.Infrastructure.Repositories;
 using Etos.Presentation.WebApi;
+using Etos.Presentation.WebApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -12,12 +13,17 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.CustomSchemaIds(type => type.FullName.ToSwaggerCompliantSchemaName());
+});
 
 builder.Services.AddApplication();
 builder.Services.AddRepositories();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Database"))
+);
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
