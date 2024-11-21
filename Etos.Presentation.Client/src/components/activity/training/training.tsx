@@ -1,9 +1,8 @@
-import React from 'react';
 import { useEffect, useState } from 'react'
 import ActivityFeedGroup from '../ActivityFeedGroup'
 
 export default function Training() {
-    const [activities, setActivities] = useState<IActivity[]>([]);
+    const [activities, setActivities] = useState<Activity[]>([]);
     useEffect(() => {
         fetch("/api/training")
             .then(response => response.json())
@@ -11,7 +10,8 @@ export default function Training() {
     }, []);
 
     return (
-        <ActivityFeedGroup Name="Training" Activities={activities} />
-        <CreateTrainingForm /> {/* TODO: This will need to be embedded into ActivityFeedGroup */}
+        <>
+            <ActivityFeedGroup Name="Training" Activities={activities} />
+        </>
     )
 }

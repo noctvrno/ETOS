@@ -7,13 +7,13 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-interface INavBarItem {
+interface NavBarItemProps {
     Name: string;
     Icon: JSX.Element;
     Route: string;
 }
 
-export default function NavBarItem(navBarItem: INavBarItem) {
+export default function NavBarItem(navBarItem: NavBarItemProps) {
     const navigate = useNavigate();
 
     return (

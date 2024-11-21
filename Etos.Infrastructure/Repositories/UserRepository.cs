@@ -18,6 +18,11 @@ public sealed class UserRepository : IUserRepository
         _dbContext.Set<User>().Add(user);
     }
 
+    public IEnumerable<User> Get()
+    {
+        return _dbContext.Set<User>();
+    }
+
     public User GetById(UserId id)
     {
         return _dbContext.Set<User>().FirstOrDefault(x => x.Id.Equals(id))

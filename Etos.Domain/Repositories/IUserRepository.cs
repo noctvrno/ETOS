@@ -4,7 +4,9 @@ namespace Etos.Domain.Repositories;
 
 public interface IUserRepository
 {
-    User GetById(UserId id);
-
     void Add(User user);
+
+    IEnumerable<User> Get();
+
+    User GetById(UserId id);
 }
