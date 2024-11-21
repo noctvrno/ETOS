@@ -4,9 +4,9 @@ namespace Etos.Domain.Entities;
 
 public class TrainingActivity : IActivity
 {
-    public ActivityId Id { get; }
-    public string Title { get; }
-    public User Assignee { get; }
+    public ActivityId Id { get; } = null!;
+    public string Title { get; } = null!;
+    public User Assignee { get; } = null!;
 
     private TrainingActivity(ActivityId id, string title, User assignee)
     {

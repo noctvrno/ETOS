@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import NavBarPage from './components/nav-bar/NavBarPage';
 import Home from './components/activity/Home';
-import Training from './components/activity/training/Training';
+import Training from './components/activity/training/training';
 
 const rootElement: HTMLElement | null = document.getElementById("root");
 if (rootElement == null)

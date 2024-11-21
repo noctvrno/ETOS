@@ -4,10 +4,10 @@ namespace Etos.Domain.Entities;
 
 public class User
 {
-    public UserId Id { get; }
-    public string FirstName { get; }
-    public string LastName { get; }
-    public string Email { get; }
+    public UserId Id { get; } = null!;
+    public string FirstName { get; } = null!;
+    public string LastName { get; } = null!;
+    public string Email { get; } = null!;
     public Collection<TrainingActivity> Trainings { get; } = [];
 
     private User(UserId userId, string firstName, string lastName, string email)
