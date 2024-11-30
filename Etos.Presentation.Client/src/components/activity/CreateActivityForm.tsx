@@ -5,7 +5,8 @@ import {
     DialogTitle,
     DialogContent,
     TextField,
-    DialogActions
+    DialogActions,
+    Autocomplete
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import EtosId from '../../models/EtosId';
@@ -22,14 +23,14 @@ interface CreateActivityRequest {
 
 export default function CreateActivityForm(form: ActivityFormProps) {
     const [open, setOpen] = useState(false);
+    const [options, setOptions] = useState<User[]>([]);
     const openForm = (): void => setOpen(true);
     const closeForm = (): void => setOpen(false);
 
-    let users: User[];
     useEffect(() => {
-        fetch("/api/users")
+        fetch("/api/user")
             .then(response => response.json())
-            .then((data: User[]) => users = data)
+            .then((data: User[]) => setOptions(data))
             .catch(reason => console.log(reason));
     }, []);
 
@@ -71,6 +72,10 @@ export default function CreateActivityForm(form: ActivityFormProps) {
                         label={form.Title}
                         fullWidth
                         variant="standard" />
+                    <Autocomplete
+                        disablePortal
+                        options={options.map(option => `${option.FirstName} ${option.LastName}`)}
+                        renderInput={params => <TextField {...params} label="User" />} />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={closeForm}>Cancel</Button>
