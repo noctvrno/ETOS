@@ -8,6 +8,7 @@ import {
 import NavBarPage from './components/nav-bar/NavBarPage';
 import Home from './components/activity/Home';
 import Training from './components/activity/training/training';
+import TrainingEditor from "./components/activity/training/TrainingEditor";
 
 const rootElement: HTMLElement | null = document.getElementById("root");
 if (rootElement == null)
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
                 path: "feedback",
                 element: <></>
             },
+            {
+                path: "training/:id", // TODO: Migrate to query parameter.
+                element: <TrainingEditor />
+            }
         ]
     },
 ]);

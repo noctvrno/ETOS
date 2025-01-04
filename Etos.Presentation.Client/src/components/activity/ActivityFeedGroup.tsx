@@ -1,6 +1,7 @@
 import { Button, Stack, Typography } from "@mui/material";
 import CreateActivityForm from "./CreateActivityForm";
 import Activity from "./Activity";
+import { useNavigate } from "react-router-dom";
 
 interface ActivityFeedGroupProps {
     name: string;
@@ -26,11 +27,30 @@ export default function ActivityFeedGroup(group: ActivityFeedGroupProps) {
     );
 }
 
+// const navigate = useNavigate();
+// navigate('/other-page', { state: { id: 7, color: 'green' } });
+
+// <Grid
+//     container
+//     component='dl' // mount a Definition List
+//     spacing={2}>
+//     <Grid item>
+//         <Typography component='dt' variant='h6'>
+//             Some Heading or Definition Term
+//         </Typography>
+//         <Typography component='dd' variant='body2'>
+//             Some Definition data
+//         </Typography>
+//     </Grid>
+// </Grid>
+
 function GenerateActivityControl(activity: Activity) {
+    const navigateTo = useNavigate();
     return <Button
         key={activity.id.value}
         color="secondary"
         variant="outlined"
+        onClick={() => navigateTo(`./${activity.id.value}`)}
         style={{
             justifyContent: "flex-start",
             color: "white",
